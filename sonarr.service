@@ -2,8 +2,8 @@
 Description=Sonarr Daemon
 After=syslog.target network.target
 [Service]
-User=sonarr
-Group=sonarr
+User=nobody
+Group=users
 Type=simple
 ExecStart=/usr/bin/mono /opt/sonarr/bin/NzbDrone.exe -nobrowser -data=/config
 TimeoutStopSec=20

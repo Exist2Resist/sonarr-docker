@@ -11,13 +11,13 @@ yum -y install wget git par2cmdline p7zip unrar unzip tar gcc python-feedparser 
   && python-cheetah python-dbus python-devel libxslt-devel yum-utils \
   && yum clean all -y
 
-useradd sonarr -s /sbin/nologin && groupmod -g 100 sonarr && usermod -u 99 -g 100 sonarr 
+groupmod -g 100 users && usermod -u 99 -g 100 nobody 
 
 mkdir -p /config
 
 wget http://download.sonarr.tv/v2/master/mono/NzbDrone.master.tar.gz -O /tmp/NzbDrone.master.tar.gz \
   && tar -xvf /tmp/NzbDrone.master.tar.gz -C /opt/ \
   && rm -f NzbDrone.master.tar.gz && mkdir /opt/sonarr && mkdir /opt/sonarr/bin && mv /opt/NzbDrone/* /opt/sonarr/bin \
-  && rm -rf /opt/NzbDrone && chown -R sonarr:sonarr /opt/sonarr /config
+  && rm -rf /opt/NzbDrone && chown -R nobody:users /opt/sonarr /config
 
 systemctl enable sonarr.service
