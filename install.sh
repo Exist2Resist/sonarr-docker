@@ -11,7 +11,7 @@ yum -y install wget git par2cmdline p7zip unrar unzip tar gcc python-feedparser 
   && curl gettext sqlite.x86_64 \
   && yum clean all -y
 
-yum -y install mono-devel mono-core && yum clean all -y
+yum -y install mono-devel-5.20.1.19 mono-core-5.20.1.19 && yum clean all -y
 
 groupmod -g 100 users && usermod -u 99 -g 100 nobody
 
