@@ -17,7 +17,7 @@ useradd -u 99 sonarru && groupmod -g 100 users && usermod -u 99 -g 100 sonarru
 mkdir -p /config
 
 # Packages list available here: http://services.sonarr.tv/v1/releases
-# Need to add auto build
+# Need to add auto version detection
 wget http://download.sonarr.tv/v3/main/3.0.6.1342/Sonarr.main.3.0.6.1342.linux.tar.gz -O /tmp/sonarr.tar.gz \
   && tar -xvf /tmp/sonarr.tar.gz -C /opt/ \
   && rm -f /tmp/sonarr.tar.gz && mkdir -p /opt/sonarr/bin && mv /opt/Sonarr/* /opt/sonarr/bin \
