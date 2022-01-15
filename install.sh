@@ -23,7 +23,7 @@ mkdir -p /config
 
 # Packages list available here: http://services.sonarr.tv/v1/releases
 LATEST_RELEASE=$(curl http://services.sonarr.tv/v1/releases | jq -r '.[] | select(.branch=="main") | .linux.manual.url ')
-wget http://download.sonarr.tv/v3/main/3.0.6.1342/Sonarr.main.3.0.6.1342.linux.tar.gz -O /tmp/sonarr.tar.gz \
+wget $LATEST_RELEASE -O /tmp/sonarr.tar.gz \
   && tar -xvf /tmp/sonarr.tar.gz -C /opt/ \
   && rm -f /tmp/sonarr.tar.gz && mkdir -p /opt/sonarr/bin && mv /opt/Sonarr/* /opt/sonarr/bin \
   && rm -rf /opt/Sonarr && chown -R sonarru:users /opt/sonarr /config
