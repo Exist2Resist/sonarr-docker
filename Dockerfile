@@ -1,4 +1,4 @@
-FROM exist2resist/rhel8-systemd
+FROM mono:5.20
 LABEL maintainer="exist2resist@outlook.com"
 
 ENV TZ='America/Edmonton' PUID=99 PGID=100
