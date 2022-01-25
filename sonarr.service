@@ -2,7 +2,7 @@
 Description=Sonarr Daemon
 After=syslog.target network.target
 [Service]
-User=nobody
+User=sonarru
 Group=users
 Type=simple
 ExecStart=/usr/bin/mono /opt/sonarr/bin/Sonarr.exe -nobrowser -data=/config
