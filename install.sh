@@ -1,8 +1,8 @@
 #!/bin/bash
 
-apt-get update && apt-get upgrade -y && apt-get clean
-apt-get install apt-utils apt-transport-https ca-certificates && apt-get clean
-apt-get update && apt-get upgrade -y && apt-get clean
+apt-get update && apt-get clean
+apt-get install apt-utils apt-transport-https dirmngr gnupg ca-certificates && apt-get clean
+apt-get apt-get upgrade -y && apt-get clean
 apt-get install software-properties-common -y && apt-get clean
 apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl wget libbz2-dev -y && apt-get clean
 
