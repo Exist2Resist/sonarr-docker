@@ -53,6 +53,7 @@ chmod 755 /usr/local/bin/systemctl
 
 mkdir -p /config
 
+# Packages list available here: http://services.sonarr.tv/v1/releases
 LATEST_RELEASE=$(curl http://services.sonarr.tv/v1/releases | jq -r '.[] | select(.branch=="main") | .linux.manual.url ')
 wget $LATEST_RELEASE -O /tmp/sonarr.tar.gz \
   && tar -xvf /tmp/sonarr.tar.gz -C /opt/ \
