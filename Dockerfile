@@ -1,4 +1,5 @@
-FROM mono:5.20
+FROM mono:6.12
+
 LABEL maintainer="exist2resist@outlook.com"
 
 ENV TZ='America/Edmonton' PUID=99 PGID=100
