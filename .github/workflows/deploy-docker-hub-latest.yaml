@@ -1,4 +1,4 @@
-name: Build and Publish to v3
+name: Build and Publish to latest
 on: workflow_dispatch
 jobs:
   build-publish:
