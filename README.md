@@ -1,4 +1,7 @@
-# sonarr-docker
+# Deprecated
+New repository for this is here: https://git.existtoresist.ca/ExistToResist/sonarr-docker.git
+
+## sonarr-docker
 
 V3 of Sonarr running in a mono:5.20 (debian9) container with gradheim python systemd replacement. 
 
